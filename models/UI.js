@@ -5,4 +5,8 @@ export class Ui{
 		const quest =  document.querySelector('.question')
 		return quest.innerHTML = question
 	}
+	setChoices(choices){
+		const conChoices = document.querySelector('.choices')
+		
+	}
 }
