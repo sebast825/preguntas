@@ -9,7 +9,7 @@ export class Quiz{
 	}
 
 	//para saber en que pregunta esta
-	getQuestionIndex(option){
+	getQuestionIndex(){
 		return this.question[this.questionIndex]
 	}
 	// finish(){
@@ -17,12 +17,12 @@ export class Quiz{
 	// 		console.log('se termino')
 	// 	}
 	// }
-	guess(correctAnswer){
-		this.questionIndex++
-		if(correctAnswer){
+	guess(answer){
+	
+		if(this.getQuestionIndex().getCorrectAnswer(answer)){
 			this.score++
 		}
-
+		this.questionIndex++
 	}
 
 }
