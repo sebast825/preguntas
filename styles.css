@@ -1,0 +1,43 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: black;
+}
+.question{
+	color: #466;
+}
+
+.container{
+	border: 2px solid white;
+	width: 20rem;
+	padding: 3rem 1rem;
+	background-color: lightcoral;
+	text-align: center;
+
+	gap: 1rem; 
+	
+}
+.choices{
+	
+	display: flex;
+	flex-direction: column;
+	align-items:center ;
+	gap: 0.5rem;
+}
+.btn{
+	width: 7rem;
+	background-color: rgb(92, 172, 199);
+	color: white;
+}
+.btn:hover{
+	background-color: lightcyan;
+	color: black;
+	
+}

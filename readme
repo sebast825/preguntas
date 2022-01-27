@@ -1,0 +1,10 @@
+data/data	
+	archivo json
+
+data/question
+	recorre cada pregunta la transforma en un objeto
+
+models/Question
+	objeto Question
+
+models/Quiz
