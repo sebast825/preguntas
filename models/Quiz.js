@@ -1,4 +1,4 @@
-// import { data } from "../data/data"
+ import { data } from "../data/data.js"
 
 export class Quiz{
 
@@ -12,11 +12,11 @@ export class Quiz{
 	getQuestionIndex(){
 		return this.question[this.questionIndex]
 	}
-	// finish(){
-	// 	if(this.numRound===data.length){
-	// 		console.log('se termino')
-	// 	}
-	// }
+	isEnded(){
+		
+		return this.question.length === this.questionIndex;
+		
+	}
 	guess(answer){
 	
 		if(this.getQuestionIndex().getCorrectAnswer(answer)){

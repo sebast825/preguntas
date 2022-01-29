@@ -1,20 +1,27 @@
-import { Quiz } from "./Quiz.js"
+
+
+const quest =  document.querySelector('.question')
+const conChoices = document.querySelector('.choices');
 
 export class Ui{
 	setQuestion(question){
-		const quest =  document.querySelector('.question')
+		
 		return quest.innerHTML = question
 	}
 	setChoices(choices,callback){
-		const conChoices = document.querySelector('.choices');
 		
+		conChoices.innerHTML = "";
 		choices.forEach(element => {
 			const choice = document.createElement('button')
 			choice.innerHTML= (element)
 			choice.classList.add('btn')
-			choice.addEventListener("click", () => callback('asd'));
+			choice.addEventListener("click", () => callback(element));
 			conChoices.appendChild(choice)
 
 		});
+	}
+	setResultado(valor){
+		conChoices.innerHTML = '';	
+		quest.innerHTML = `Tu Puntaje es: ${valor}`
 	}
 }
