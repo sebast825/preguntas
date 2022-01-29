@@ -5,8 +5,16 @@ export class Ui{
 		const quest =  document.querySelector('.question')
 		return quest.innerHTML = question
 	}
-	setChoices(choices){
-		const conChoices = document.querySelector('.choices')
+	setChoices(choices,callback){
+		const conChoices = document.querySelector('.choices');
 		
+		choices.forEach(element => {
+			const choice = document.createElement('button')
+			choice.innerHTML= (element)
+			choice.classList.add('btn')
+			choice.addEventListener("click", () => callback('asd'));
+			conChoices.appendChild(choice)
+
+		});
 	}
 }

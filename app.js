@@ -8,14 +8,12 @@ function main(){
 	// console.log(question)
 	const qu = new Quiz(question)
 	const ui = new Ui()
-	ui.setQuestion((qu.getQuestionIndex().question))
-	
-	console.log(qu.getQuestionIndex())
-	qu.guess('word')
-	
 	console.log(qu)
-	qu.guess('haskell')
-	console.log(qu)
+	ui.setQuestion(qu.getQuestionIndex().question);
+	ui.setChoices(qu.getQuestionIndex().choices,()=> console.log('asd'));
+	
+	
+	
 
 }
 
